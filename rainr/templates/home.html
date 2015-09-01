@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h2> Rain Types </h2>
+    <div id="rain_data"></div>
+    <script src="{{ url_for('static', filename='js/flot.js')}}"></script>
+    <script>
+        rain_data({{data | tojson}});
+    </script>
+{% endblock %}
